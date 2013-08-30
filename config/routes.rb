@@ -1,5 +1,19 @@
 Socialwars::Application.routes.draw do
 
+  get "units/place"
+
+  get "units/move"
+
+  get "units/fortify"
+
+  get "units/edit"
+
+  get "units/attack"
+
+  get "formations/new"
+
+  get "formations/create"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
