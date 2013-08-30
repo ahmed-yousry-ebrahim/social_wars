@@ -1,0 +1,5 @@
+Description:
+    Rename your Rails project
+
+Example:
+    rails generate rsm:rename new_name
