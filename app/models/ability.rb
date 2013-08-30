@@ -15,6 +15,7 @@ class Ability
   end 
   def authenticated
     anonymous
-    
+    can [:new, :create],:formation
+    can [:edit, :place , :move, :attack, :fortify],:unit
   end
 end

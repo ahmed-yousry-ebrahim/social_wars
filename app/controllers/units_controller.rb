@@ -1,4 +1,5 @@
 class UnitsController < ApplicationController
+  authorize_resource :class => false 
   def place
   end
 
@@ -13,4 +14,5 @@ class UnitsController < ApplicationController
 
   def attack
   end
+  
 end

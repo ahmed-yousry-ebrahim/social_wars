@@ -1,1 +1,19 @@
 <% page_title 'Welcome to Social Wars!' %>
+<%if current_user.user_units.joins(:unit).where("units.unit_type_id = 2").count == 0%>
+	<div>
+		You didn't create your castle defense units yet! .. create them now
+	</div>
+	
+	<div>
+		<%=link_to "Create defense units" , new_formation_path(:type=>1)  , :class=>"btn btn-primary"%>
+	</div>
+<%else%>
+ 	<div>
+		Choose wheater to change your defense formation or Attack some one
+	</div>
+	
+	<div>
+		<%=link_to "change defense units" , new_formation_path(:type=>1)  , :class=>"btn btn-info"%>
+		<%=link_to "Attack someone" , new_formation_path(:type=>2)  , :class=>"btn btn-danger"%>
+	</div>
+<%end%>
