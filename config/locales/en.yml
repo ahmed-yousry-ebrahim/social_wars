@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  app_name: "Rails-yeast"
+  app_name: "Social Wars"
   powered_by_html: 'Powered by <a href="http://rayasocialmedia.com?ref=Rails-yeast">Raya Social Media</a>'
   
   resources:

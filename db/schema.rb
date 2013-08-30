@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130318163733) do
+ActiveRecord::Schema.define(:version => 20130830203139) do
+
+  create_table "locations", :force => true do |t|
+    t.integer  "row"
+    t.integer  "column"
+    t.integer  "user_unit_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -22,6 +30,33 @@ ActiveRecord::Schema.define(:version => 20130318163733) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "unit_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "units", :force => true do |t|
+    t.string   "name"
+    t.integer  "defense"
+    t.integer  "attack"
+    t.integer  "range"
+    t.integer  "unit_type_id"
+    t.integer  "soldiers_count"
+    t.integer  "speed"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "user_units", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "unit_id"
+    t.integer  "accuracy"
+    t.integer  "armor"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name",                                   :null => false

@@ -65,7 +65,6 @@ Socialwars::Application.routes.draw do
       sign_up: 'new'
     }
   
-  resources :contacts, only: [:new, :create]
   resources :resources
   resources :errors
   match 'welcome' => 'resources#welcome'
