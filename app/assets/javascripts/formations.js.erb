@@ -1,0 +1,14 @@
+$("#create_units").on("submit",function(e) {
+	
+	totalUnits = 0
+	$.each($("#create_units select"),function(i,field){
+		totalUnits = totalUnits+parseInt(field.value);
+	});
+	if(totalUnits == 20){
+		
+	}
+	else{
+		alert("total number of units must be 20 yours is "+totalUnits);
+		return false;
+	}
+});

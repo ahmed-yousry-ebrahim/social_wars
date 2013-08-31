@@ -1,2 +1,17 @@
-<h1>Formations#new</h1>
-<p>Find me in app/views/formations/new.html.erb</p>
+<% page_title 'Select your units' %>
+
+<div>
+	Select how many units of each type in your army .. Your whole army must consist of twenty units no more no less
+</div>
+<div>
+	<%= form_tag(save_formations_path, :method => "post" , :id => "create_units") do %>
+	<%=hidden_field_tag 'type', @type%>
+		<%Unit.where(:unit_type_id => @type).each do |unit|%>
+			<div>
+			<%=label_tag unit.name, unit.name%>
+			<%=select_tag unit.name, options_for_select(1..15)%>
+			</div>	
+		<%end%>	
+		<%= submit_tag("Create units", class: 'btn') %>
+	<% end %>	
+</div>

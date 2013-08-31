@@ -15,4 +15,8 @@ class UnitsController < ApplicationController
   def attack
   end
   
+  def index
+    
+  end
+  
 end

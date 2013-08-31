@@ -5,7 +5,7 @@
 	</div>
 	
 	<div>
-		<%=link_to "Create defense units" , new_formation_path(:type=>1)  , :class=>"btn btn-primary"%>
+		<%=link_to "Create defense units" , new_formation_path(:type=>2)  , :class=>"btn btn-primary"%>
 	</div>
 <%else%>
  	<div>
@@ -13,7 +13,7 @@
 	</div>
 	
 	<div>
-		<%=link_to "change defense units" , new_formation_path(:type=>1)  , :class=>"btn btn-info"%>
-		<%=link_to "Attack someone" , new_formation_path(:type=>2)  , :class=>"btn btn-danger"%>
+		<%=link_to "change defense units" , new_formation_path(:type=>2)  , :class=>"btn btn-info"%>
+		<%=link_to "Attack someone" , new_formation_path(:type=>1)  , :class=>"btn btn-danger"%>
 	</div>
 <%end%>

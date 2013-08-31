@@ -7,11 +7,14 @@ Socialwars::Application.routes.draw do
       get "attack"
       get "fortify"
     end
+    collection do
+      get "index"
+    end
   end
   resources :formations do
     collection do
       get "new"
-      post "create"
+      post "save"
     end
   end
   
